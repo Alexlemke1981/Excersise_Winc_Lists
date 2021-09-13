@@ -1,0 +1,32 @@
+# Definition of the function alphabetic_order
+def alphabetical_order(movie_list_williams):
+    movie_list_williams.sort()
+    return movie_list_williams
+
+films = ['Munich','Jurassic Park','Dracula','Amistad']
+print(alphabetical_order(films))
+
+# Definition of the function won_golden_globe
+# Defines the lower case: ggw_lc = golden_globe_winners_lower_case
+def won_golden_globe(film):
+    golden_globe_winners = ['Jaws','Star Wars: Episode IV - A New Hope','E.T. The Extra-Terrestrial','Memoirs of a Geisha']
+    ggw_lc = [x.lower() for x in golden_globe_winners]
+    if film.lower() in ggw_lc:
+        return True
+    else:
+        return False
+
+print(won_golden_globe('star wars: episode iv - a new hope')) # = True a Golden globe winner
+print(won_golden_globe('superman')) # = False not a golden globe winner
+
+# Definition of the function remove_toto_albums
+
+def remove_toto_albums(list_of_albums):
+    albums_toto = ['Fahrenheit','The Seventh One','Toto XX','Falling in Between','35th Anniversary - Live in Poland','Toto XIV','Old Is New','40 Tours Around the Sun','With a Little Help from My Friends']
+    for x in albums_toto:
+        if x in list_of_albums:
+            list_of_albums.remove(x)
+    return list_of_albums
+
+mixed_list = ['The BFG','Toto XX','Jurassic Park','Star Wars: The Last Jedi','Falling in Between','The Seventh One','War Horse']
+print(remove_toto_albums(mixed_list)) # Removes the albums from the list
